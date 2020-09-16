@@ -20,7 +20,11 @@ const forecast = (longitude, latitude, callback) => {
         undefined,
         body.current.temperature +
           " currently, feels like " +
-          body.current.feelslike
+          body.current.feelslike +
+          ", Outside: " +
+          body.current.weather_descriptions[0] +
+          " with humidity " +
+          body.current.humidity
       );
     }
   });
